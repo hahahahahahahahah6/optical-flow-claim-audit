@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optical-flow-claim-audit"
+version = "0.1.0"
+description = "Offline static audit of documented pixel motion capabilities"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Claim Audit Contributors"}]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+optical-flow-claim-audit = "optical_flow_claim_audit.audit:main"
+
+[tool.setuptools.packages.find]
+include = ["optical_flow_claim_audit*"]
